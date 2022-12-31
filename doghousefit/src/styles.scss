@@ -1,4 +1,5 @@
-html {
-    background-color: tan;
-    font-family: 'Poppins', sans-serif;
-}
+// @use 'scss/globals' as *;
+@use 'scss/globals';
+@use 'scss/navbar';
+@use 'scss/landingpage';
+@use 'scss/content';

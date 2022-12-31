@@ -1,8 +1,13 @@
-import React, { Component } from "react";
+import React from 'react';
 
-const Navbar = () => {
-    return 
-    (<div>
-        asdf
-    </div>);
-}
+// Need to implement this using routers
+const Navbar = () => (
+  <nav>
+    <a href="#Home">Home</a>
+    <a href="#newsletter">Newsletter</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+);
+
+export default Navbar;

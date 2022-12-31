@@ -1,0 +1,35 @@
+@use 'globals' as *;
+
+#landingpage-video {
+    // position: absolute;
+    // top: 0;
+    z-index: -1;
+    width: 100vw;
+    filter: brightness(0.2);
+    object-position: center;
+}
+
+div.message {
+    color: white;
+    width: 100%;
+    text-align: center;
+    // padding-top: 100px;
+    position: absolute;
+    top: 10vw;
+    transform: scale(1.5);
+    // transform: translateY(50%);
+    h3, p {
+        font-weight: 700;
+    }
+    h3 > span {
+        color: $accent-1;
+    }
+}
+
+
+.logo {
+    position: absolute;
+    top: 3%;
+    left: 40px;
+    z-index: 1;
+}
