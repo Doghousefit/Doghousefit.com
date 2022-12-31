@@ -11,17 +11,17 @@
 
 div.message {
     color: white;
-    width: 100%;
+    // transform: scale(1.5);
+    width: 100vw;
     text-align: center;
     // padding-top: 100px;
     position: absolute;
     top: 10vw;
-    transform: scale(1.5);
-    // transform: translateY(50%);
-    h3, p {
+    transform: translateY(50%);
+    h1, p {
         font-weight: 700;
     }
-    h3 > span {
+    h1 > span {
         color: $accent-1;
     }
 }

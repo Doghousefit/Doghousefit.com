@@ -6,6 +6,9 @@ $accent-1: #2870D9;
 @mixin outline {
   outline: 1px black solid;
 }
+@mixin main-font {
+  font-family: "Poppins", sans-serif;
+}
 
 html {
   font-size: 100%;

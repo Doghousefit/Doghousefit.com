@@ -10,7 +10,7 @@ const LandingPage = () => {
                 <source src={video} type="video/mp4" />
             </video>
             <div className="message">
-                <h3>Workout <span>Smarter</span>, Not <span>Harder</span></h3>
+                <h1>Workout <span>Smarter</span>, Not <span>Harder</span></h1>
                 <p>Fitness information you actually understand</p>
             </div>
         </div>
