@@ -102,6 +102,12 @@ div.message h1 > span {
   display: flex;
   margin: 2% 10%;
 }
+.content:first-child {
+  margin-bottom: 0;
+}
+.content:nth-child(2) {
+  margin-top: 0;
+}
 
 div.content-container {
   padding: 8%;
