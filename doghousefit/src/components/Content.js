@@ -1,6 +1,6 @@
 import React from 'react';
 import newsletterexample from '../visuals/NewsletterExample.png';
-import MailchimpForm from './MailchimpForm';
+import MailchimpForm from './MailChimpForm';
 
 
 const Content = () => {
