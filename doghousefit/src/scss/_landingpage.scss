@@ -1,18 +1,21 @@
 @use 'globals' as *;
 
-#landingpage-video {
-    // position: absolute;
-    // top: 0;
-    z-index: -1;
-    width: 100vw;
-    filter: brightness(0.3);
-    object-position: center;
+div.landingpage {
+    width: 100%;
+    #landingpage-video {
+        // position: absolute;
+        // top: 0;
+        z-index: -1;
+        width: 100vw;
+        filter: brightness(0.3);
+        object-position: center;
+    }
 }
 
 div.message {
     color: white;
     // transform: scale(1.5);
-    width: 100vw;
+    width: 100%;
     text-align: center;
     // padding-top: 100px;
     position: absolute;
