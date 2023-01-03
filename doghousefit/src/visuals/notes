@@ -1,0 +1,4 @@
+With a huge number of device targets and screen sizes across the Windows 10 ecosystem, rather than optimizing your UI for each device, we recommended designing for a few key width categories (also called “breakpoints“):
+* Small (smaller than 640px)
+* Medium (641px to 1007px)
+* Large (1008px and larger)

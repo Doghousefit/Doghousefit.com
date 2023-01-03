@@ -1,12 +1,9 @@
 // import MailchimpSubscribe from "react-mailchimp-subscribe"
-import Mailchimp from "react-mailchimp-form"
-
-const url = 'https://doghousefit.us8.list-manage.com/subscribe/post?u=b2cfc16106c06e622f3e213b8&amp;id=ee247e2ee5&amp;f_id=001e63e0f0';
+import Mailchimp from "react-mailchimp-form";
   
 // export default SimpleForm;
-// const MailChimpForm = () => <MailchimpSubscribe url={url} />;
 const MailChimpForm = () => <Mailchimp
-    action={url} 
+    action = { process.env.REACT_APP_MAILCHIMP_URL }
 
     //Adding multiple fields:
     fields={[

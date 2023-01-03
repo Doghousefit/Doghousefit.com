@@ -1,12 +1,12 @@
-import React from 'react';
+import logo from '../visuals/Logo.svg';
 
-// Need to implement this using routers
 const Navbar = () => (
   <nav>
-    <a href="#Home">Home</a>
-    <a href="#newsletter">Newsletter</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+    <img src={logo} alt="logo" className="logo" draggable="false" />
+    <a href="/">Home</a>
+    <a href="/newsletters">Newsletters</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
   </nav>
 );
 
