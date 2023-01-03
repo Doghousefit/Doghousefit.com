@@ -2,6 +2,7 @@ html {
   font-size: 100%;
   background-color: #303030;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 } /*16px*/
 body {
   font-family: "Poppins", sans-serif;
@@ -67,7 +68,7 @@ nav {
 nav a {
   text-decoration: none;
   margin: 20px;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 20px;
   color: white;
 }
@@ -96,19 +97,40 @@ div.message {
   top: 10vw;
   transform: translateY(50%);
 }
+div.message h1 {
+  font-size: 60px;
+}
+div.message p {
+  font-size: 22.5px;
+  z-index: 5;
+}
 div.message h1, div.message p {
   font-weight: 700;
 }
-div.message h1 > span:first-child {
+div.message h1 > span {
   color: #2870D9;
 }
-div.message h1 > span:nth-child(2) {
-  color: #4F6178;
+div.message img {
+  position: absolute;
+  transform: scale(0.4) translate(-91%, -142%);
+}
+
+div.landingpage a {
+  position: absolute;
+  top: 50vw;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleY(1);
+}
+div.landingpage a img {
+  height: 50px;
+}
+div.landingpage a img:hover {
+  filter: brightness(0.8);
 }
 
 .content {
   display: flex;
-  margin: 2% 10%;
+  margin: 5% 10%;
 }
 .content:first-child {
   margin-bottom: 0;
@@ -167,6 +189,7 @@ div.content-container form button {
 }
 div.content-container form button:hover {
   cursor: pointer;
+  filter: brightness(0.8);
 }
 div.content-container form button:active {
   filter: brightness(0.8);

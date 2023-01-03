@@ -7,7 +7,7 @@ const Content = () => {
     return (
         <div className="wrapper">
             <div className='content'>
-                <div className="content-container">
+                <div id="signup" className="content-container">
                     <h2>Join Our Community</h2>
                     <h5>Sign up for our newsletter to receive weekly fitness updates and news.</h5>
                     <MailchimpForm />

@@ -18,15 +18,39 @@ div.message {
     position: absolute;
     top: 10vw;
     transform: translateY(50%);
+    h1 {
+        font-size: 60px;
+    }
+    p {
+        font-size: 22.5px;
+        z-index: 5;
+    }
     h1, p {
         font-weight: 700;
     }
     h1 > span {
-        &:first-child {
-            color: $accent-1;
-        }
-        &:nth-child(2) {
-            color: #4F6178;
-        }
+        color: $accent-1;
+        // &:first-child {
+        //     color: $accent-1;
+        // }
+        // &:nth-child(2) {
+        //     color: #4F6178;
+        // }
+    }
+    img {
+        position: absolute;
+        transform: scale(0.4) translate(-91%, -142%);
     }
 }
+div.landingpage a {
+    position: absolute;
+    top: 50vw;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleY(1);
+    img {
+        height: 50px;
+        &:hover {
+            filter: brightness(0.8);
+        }
+    }
+  }
