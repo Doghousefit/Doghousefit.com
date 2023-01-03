@@ -87,7 +87,7 @@ div.landingpage {
 }
 div.landingpage #landingpage-video {
   z-index: -1;
-  width: 100vw;
+  width: 100%;
   filter: brightness(0.3);
   object-position: center;
 }
