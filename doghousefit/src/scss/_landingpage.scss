@@ -14,13 +14,12 @@ div.landingpage {
 
 div.message {
     color: white;
-    // transform: scale(1.5);
     width: 100%;
     text-align: center;
-    // padding-top: 100px;
     position: absolute;
     top: 10vw;
     transform: translateY(50%);
+
     h1 {
         font-size: 60px;
     }
@@ -45,6 +44,7 @@ div.message {
         transform: scale(0.4) translate(-91%, -142%);
     }
 }
+
 div.landingpage a {
     position: absolute;
     top: 50vw;
@@ -56,4 +56,68 @@ div.landingpage a {
             filter: brightness(0.8);
         }
     }
-  }
+}
+
+@media (max-width: 1008px) {
+    div.message {
+        h1 {
+            font-size: 40px;
+        }
+        p {
+            font-size: 20px;
+        }
+        img {
+            position: absolute;
+            transform: scale(0.35) translate(-108%, -162%);
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    div.message { 
+        h1 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 15px;
+        }
+        img {
+            position: absolute;
+            transform: scale(0.25) translate(-165%, -223%);
+        }
+    }
+    div.landingpage a {
+        img {
+            height: 20px;
+            &:hover {
+                filter: brightness(0.8);
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    div.message { 
+        h1 {
+            font-size: 20px;
+        }
+        p {
+            font-size: 10px;
+        }
+        img {
+            position: absolute;
+            transform: scale(0.17) translate(-259%, -323%);
+        }
+    }
+    div.landingpage a {
+        img {
+            height: 20px;
+            &:hover {
+                filter: brightness(0.8);
+            }
+        }
+    }
+    div.content-container > img {
+        width: 40vw !important;
+    }
+}

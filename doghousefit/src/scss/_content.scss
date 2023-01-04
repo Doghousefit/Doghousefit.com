@@ -1,25 +1,13 @@
 @use 'globals' as *;
 
 .content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin: 5% 10%;
-    &:first-child {
-        margin-bottom: 0;
-    }
-    &:nth-child(2) {
-        margin-top: 0;
-        margin-bottom: 12vw;
-    }
 }
 
 div.content-container {
-    // @include outline;
     padding: 8%;
-    &:last-child {
-        padding: 4% !important;
-    }
-    text-align: center;
-
     h2 {
         font-weight: 400;
         background: linear-gradient(90.64deg, #A9D1FF 22.75%, #FFFFFF 100.29%);
@@ -32,9 +20,6 @@ div.content-container {
     h5 {
         margin-top: 10px;
     }
-    img {
-        width: 25vw;
-    }
     a > img {
         &:hover {
             transform: scale(1.1);
@@ -42,6 +27,7 @@ div.content-container {
             transition: 1s;
         }
     }
+
     form {
         display: flex;
         flex-direction: column;
@@ -101,54 +87,107 @@ div.content-container {
             filter: brightness(0.8);
         }
     }
-
-    div.image-carousel {
-        .images {
-            // display: none;
-            width: 40vw;
-            position: relative;
-            img {
-                position: absolute;
-                transform: translateX(-50%);
-                width: 15vw;
-                transition: 1s;
-                &:hover {
-                    cursor: pointer;
-                }
-            }
-            img.active {
-                z-index: 1;
-            }
-            img.left {
-                filter: brightness(0.75);
-                transform: translate(-85%, 10%);
-            }
-            img.right {
-                filter: brightness(0.75);
-                transform: translate(-15%, 10%);
+}
+div.image-carousel {
+    position: relative;
+    .images {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        img {
+            width: 20vw;
+            transition: 1s;
+        }
+        img.hidden {
+            opacity: 0;
+            display: block;
+            margin: auto;
+        }
+        img.active {
+            position: absolute;
+            transform: translate(34%, -100%);
+            z-index: 1;
+        }
+        img.left {
+            filter: brightness(0.75);
+            position: absolute;
+            transform: translate(14%, -90%);
+        }
+        img.right {
+            filter: brightness(0.75);
+            position: absolute;
+            transform: translate(54%, -90%);
+        }
+    }
+    .indicators {
+        position: relative;
+        top: 4vw;
+        display: flex;
+        justify-content: center;
+        .dot {
+            height: 10px;
+            width: 10px;
+            background-color: gray;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 10px;
+            &:hover {
+                cursor: pointer;
+                background-color: white;
             }
         }
-
-        .indicators {
-            position: relative;
-            top: 25vw;
-            display: flex;
-            justify-content: center;
-            .dot {
-                height: 10px;
-                width: 10px;
-                background-color: gray;
-                border-radius: 50%;
-                display: inline-block;
-                margin: 10px;
-                &:hover {
-                    cursor: pointer;
-                    background-color: white;
-                }
-            }
-            span.active {
-                background-color: white !important;
-            }
+        span.active {
+            background-color: white !important;
         }
+    }
+}
+
+div.text {
+    text-align: center;
+}
+div.newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 20vw;
+    }
+}
+
+
+@media (max-width: 640px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter {
+        display: none !important;
+    }
+    div.images {
+        img {
+            width: 30vw !important;
+        }
+        img.active {
+            position: absolute;
+            // transform: translate(34%, -100%);
+            // filter: brightness(0.75);
+            transform: translate(62%, -100%) !important;
+            z-index: 1;
+        }
+        img.left {
+            filter: brightness(0.75);
+            position: absolute;
+            // transform: translate(24%, -90%);
+            transform: translate(42%, -90%) !important;
+        }
+        img.right {
+            filter: brightness(0.75);
+            position: absolute;
+            // transform: translate(44%, -90%);
+            transform: translate(82%, -90%) !important;
+        }
+    }
+    .indicators {
+        top: 6vw !important;
     }
 }

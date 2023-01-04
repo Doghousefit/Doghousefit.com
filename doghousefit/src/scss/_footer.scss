@@ -3,7 +3,8 @@
 
 footer {
     margin-top: 10px;
-    
+    padding-bottom: 50px;
+
     .line {
         position: absolute;
         width: 90%;
@@ -54,5 +55,11 @@ footer {
         &:hover {
             text-decoration: underline;
         }
+    }
+}
+
+@media (max-width: 640px) {
+    .copyright, .privacy-policy {
+        font-size: 10px;
     }
 }

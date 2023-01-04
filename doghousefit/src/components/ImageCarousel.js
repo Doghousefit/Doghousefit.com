@@ -18,6 +18,12 @@ const ImageCarousel = () => {
                 <img 
                     src={NewslettersExample} 
                     alt="Newsletter Example 1" 
+                    className="hidden" 
+                    draggable='false'
+                />
+                <img 
+                    src={NewslettersExample} 
+                    alt="Newsletter Example 1" 
                     className={index === 1 ? 'active': index === 2 ? 'left' : 'right'} 
                     draggable='false' 
                     onClick={() => handleImageChange(1)}

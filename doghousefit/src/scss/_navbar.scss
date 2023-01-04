@@ -5,6 +5,7 @@
     top: 3%;
     left: 20px;
     z-index: 1;
+    height: clamp(5vw, 80px, 10vw);
 }
 
 nav {
@@ -29,8 +30,12 @@ nav {
         }
     }
 }
-
-@media (max-width: 640) {
+@media (max-width: 1008px) {
+    nav > a {
+        margin: 20px 12px;
+    }
+}
+@media (max-width: 640px) {
     nav {
         display: none;
     }

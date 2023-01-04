@@ -54,6 +54,7 @@ small, .text_small {
   top: 3%;
   left: 20px;
   z-index: 1;
+  height: clamp(5vw, 80px, 10vw);
 }
 
 nav {
@@ -77,7 +78,12 @@ nav a:hover, nav a:focus {
   text-decoration-color: #2870D9;
 }
 
-@media (max-width: 640) {
+@media (max-width: 1008px) {
+  nav > a {
+    margin: 20px 12px;
+  }
+}
+@media (max-width: 640px) {
   nav {
     display: none;
   }
@@ -131,24 +137,65 @@ div.landingpage a img:hover {
   filter: brightness(0.8);
 }
 
+@media (max-width: 1008px) {
+  div.message h1 {
+    font-size: 40px;
+  }
+  div.message p {
+    font-size: 20px;
+  }
+  div.message img {
+    position: absolute;
+    transform: scale(0.35) translate(-108%, -162%);
+  }
+}
+@media (max-width: 640px) {
+  div.message h1 {
+    font-size: 30px;
+  }
+  div.message p {
+    font-size: 15px;
+  }
+  div.message img {
+    position: absolute;
+    transform: scale(0.25) translate(-165%, -223%);
+  }
+  div.landingpage a img {
+    height: 20px;
+  }
+  div.landingpage a img:hover {
+    filter: brightness(0.8);
+  }
+}
+@media (max-width: 450px) {
+  div.message h1 {
+    font-size: 20px;
+  }
+  div.message p {
+    font-size: 10px;
+  }
+  div.message img {
+    position: absolute;
+    transform: scale(0.17) translate(-259%, -323%);
+  }
+  div.landingpage a img {
+    height: 20px;
+  }
+  div.landingpage a img:hover {
+    filter: brightness(0.8);
+  }
+  div.content-container > img {
+    width: 40vw !important;
+  }
+}
 .content {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   margin: 5% 10%;
-}
-.content:first-child {
-  margin-bottom: 0;
-}
-.content:nth-child(2) {
-  margin-top: 0;
-  margin-bottom: 12vw;
 }
 
 div.content-container {
   padding: 8%;
-  text-align: center;
-}
-div.content-container:last-child {
-  padding: 4% !important;
 }
 div.content-container h2 {
   font-weight: 400;
@@ -160,9 +207,6 @@ div.content-container h2 {
 }
 div.content-container h5 {
   margin-top: 10px;
-}
-div.content-container img {
-  width: 25vw;
 }
 div.content-container a > img:hover {
   transform: scale(1.1);
@@ -223,37 +267,46 @@ div.content-container a.archive:hover {
   cursor: pointer;
   filter: brightness(0.8);
 }
-div.content-container div.image-carousel .images {
-  width: 40vw;
+
+div.image-carousel {
   position: relative;
 }
-div.content-container div.image-carousel .images img {
-  position: absolute;
-  transform: translateX(-50%);
-  width: 15vw;
+div.image-carousel .images {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+div.image-carousel .images img {
+  width: 20vw;
   transition: 1s;
 }
-div.content-container div.image-carousel .images img:hover {
-  cursor: pointer;
+div.image-carousel .images img.hidden {
+  opacity: 0;
+  display: block;
+  margin: auto;
 }
-div.content-container div.image-carousel .images img.active {
+div.image-carousel .images img.active {
+  position: absolute;
+  transform: translate(34%, -100%);
   z-index: 1;
 }
-div.content-container div.image-carousel .images img.left {
+div.image-carousel .images img.left {
   filter: brightness(0.75);
-  transform: translate(-85%, 10%);
+  position: absolute;
+  transform: translate(14%, -90%);
 }
-div.content-container div.image-carousel .images img.right {
+div.image-carousel .images img.right {
   filter: brightness(0.75);
-  transform: translate(-15%, 10%);
+  position: absolute;
+  transform: translate(54%, -90%);
 }
-div.content-container div.image-carousel .indicators {
+div.image-carousel .indicators {
   position: relative;
-  top: 25vw;
+  top: 4vw;
   display: flex;
   justify-content: center;
 }
-div.content-container div.image-carousel .indicators .dot {
+div.image-carousel .indicators .dot {
   height: 10px;
   width: 10px;
   background-color: gray;
@@ -261,16 +314,59 @@ div.content-container div.image-carousel .indicators .dot {
   display: inline-block;
   margin: 10px;
 }
-div.content-container div.image-carousel .indicators .dot:hover {
+div.image-carousel .indicators .dot:hover {
   cursor: pointer;
   background-color: white;
 }
-div.content-container div.image-carousel .indicators span.active {
+div.image-carousel .indicators span.active {
   background-color: white !important;
 }
 
+div.text {
+  text-align: center;
+}
+
+div.newsletter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.newsletter img {
+  width: 20vw;
+}
+
+@media (max-width: 640px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+  .newsletter {
+    display: none !important;
+  }
+  div.images img {
+    width: 30vw !important;
+  }
+  div.images img.active {
+    position: absolute;
+    transform: translate(62%, -100%) !important;
+    z-index: 1;
+  }
+  div.images img.left {
+    filter: brightness(0.75);
+    position: absolute;
+    transform: translate(42%, -90%) !important;
+  }
+  div.images img.right {
+    filter: brightness(0.75);
+    position: absolute;
+    transform: translate(82%, -90%) !important;
+  }
+  .indicators {
+    top: 6vw !important;
+  }
+}
 footer {
   margin-top: 10px;
+  padding-bottom: 50px;
 }
 footer .line {
   position: absolute;
@@ -316,6 +412,12 @@ footer .privacy-policy {
 }
 footer .privacy-policy:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .copyright, .privacy-policy {
+    font-size: 10px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
