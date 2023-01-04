@@ -85,7 +85,15 @@ nav a:hover, nav a:focus {
 }
 @media (max-width: 640px) {
   nav {
+    justify-content: center;
+  }
+  nav img {
     display: none;
+  }
+}
+@media (max-width: 450px) {
+  nav a {
+    font-size: 15px;
   }
 }
 div.landingpage {
@@ -361,7 +369,7 @@ div.newsletter img {
     transform: translate(82%, -90%) !important;
   }
   .indicators {
-    top: 6vw !important;
+    top: 8vw !important;
   }
 }
 footer {
