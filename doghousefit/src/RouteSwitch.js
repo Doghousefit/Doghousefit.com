@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from './App';
-import Newsletters from './Newsletters';
-import About from './About';
-import Contact from './Contact';
+import Newsletters from './pages/Newsletters';
+import About from './pages/Contact';
+import Contact from './pages/Contact';
 
 const RouteSwitch = () => {
     return (
