@@ -1,21 +1,22 @@
-import { useEffect, useRef } from 'react';
+// import { useEffect, useRef } from 'react';
 import video from '../visuals/LandingPageBackground.mp4';
 import circle from '../visuals/DrawnCircle.svg';
 import arrow from '../visuals/Arrow.svg';
 import thumbnail from '../visuals/Thumbnail.png';
 
 const LandingPage = () => {
-    const videoRef = useRef(null);
+    // const videoRef = useRef(null);
 
-    useEffect(() => {
-        if (videoRef.current) {
-            videoRef.current.play();
-        }
-    }, [videoRef]);
-    
+    // useEffect(() => {
+    //     if (videoRef.current) {
+    //         videoRef.current.play();
+    //     }
+    // }, [videoRef]);
+    // ref={videoRef}
+
     return (
         <div className="landingpage">
-            <video autoPlay loop muted id="landingpage-video" playsinline ref={videoRef}>
+            <video autoPlay loop muted id="landingpage-video" playsInline>
                 <source src={video} type="video/mp4" />
             </video>
             <div className="message">
