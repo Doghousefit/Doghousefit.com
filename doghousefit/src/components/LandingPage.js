@@ -6,7 +6,7 @@ import thumbnail from '../visuals/Thumbnail.png';
 const LandingPage = () => {
     return (
         <div className="landingpage">
-            <video autoPlay loop muted id="landingpage-video">
+            <video autoPlay loop muted playsinline id="landingpage-video">
                 <source src={video} type="video/mp4" />
             </video>
             <div className="message">
