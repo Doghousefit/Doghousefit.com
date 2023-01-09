@@ -5,6 +5,7 @@ import arrow from '../visuals/Arrow.svg';
 import thumbnail from '../visuals/Thumbnail.png';
 
 const LandingPage = () => {
+    // console.log(process.env)
     const videoRef = useRef(null);
 
     useEffect(() => {
