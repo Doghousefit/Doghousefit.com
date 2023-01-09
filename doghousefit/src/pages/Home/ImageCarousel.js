@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import NewslettersExample from '../visuals/NewsletterExample.png';
-import NewslettersExample1 from '../visuals/NewsletterExample1.png';
-import NewslettersExample2 from '../visuals/NewsletterExample2.png';
+import NewslettersExample from './visuals/NewsletterExample.png';
+import NewslettersExample1 from './visuals/NewsletterExample1.png';
+import NewslettersExample2 from './visuals/NewsletterExample2.png';
 
 
 const ImageCarousel = () => {

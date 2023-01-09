@@ -1,6 +1,6 @@
-import Linkedin from '../visuals/Linkedin.svg';
-import Twitter from '../visuals/Twitter.svg';
-import Instagram from '../visuals/Instagram.svg';
+import Linkedin from './visuals/Linkedin.svg'
+import Twitter from './visuals/Twitter.svg';
+import Instagram from './visuals/Instagram.svg';
 
 const Footer = () => {
     return (

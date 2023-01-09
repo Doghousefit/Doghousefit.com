@@ -1,4 +1,4 @@
-import newsletterexample from '../visuals/NewsletterExample.png';
+import newsletterexample from './visuals/NewsletterExample.png';
 import MailchimpForm from './MailChimpForm';
 import ImageCarousel from './ImageCarousel';
 

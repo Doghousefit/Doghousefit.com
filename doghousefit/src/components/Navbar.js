@@ -1,4 +1,4 @@
-import logo from '../visuals/Logo.svg';
+import logo from './visuals/Logo.svg';
 
 const Navbar = () => (
   <nav>
