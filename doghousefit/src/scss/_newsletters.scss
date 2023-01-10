@@ -57,7 +57,7 @@
         flex-direction: column;
         flex-grow: 1;
 
-        *:not(li) {
+        *:not(li, a) {
             padding: 0 5%;
         }
         .issue-number {
@@ -68,6 +68,10 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            // a:hover {
+            //     // filter: brightness(0.9);
+            //     // box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            // }
         }
 
         .issue-tags {
@@ -90,6 +94,13 @@
         }
         .issue-title {
             margin: 0;
+            a {
+                text-decoration: none;
+                color: white;
+                &:hover {
+                    filter: brightness(0.9);
+                }
+            }
         }
         .issue-credits {
             margin: 1rem 0;

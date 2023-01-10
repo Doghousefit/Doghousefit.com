@@ -463,7 +463,6 @@ div.newsletter img {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
 }
 
 @media (max-width: 900px) {
@@ -520,7 +519,7 @@ div.newsletter img {
   flex-direction: column;
   flex-grow: 1;
 }
-.issue-card .issue-description *:not(li) {
+.issue-card .issue-description *:not(li, a) {
   padding: 0 5%;
 }
 .issue-card .issue-description .issue-number {
@@ -551,6 +550,13 @@ div.newsletter img {
 }
 .issue-card .issue-description .issue-title {
   margin: 0;
+}
+.issue-card .issue-description .issue-title a {
+  text-decoration: none;
+  color: white;
+}
+.issue-card .issue-description .issue-title a:hover {
+  filter: brightness(0.9);
 }
 .issue-card .issue-description .issue-credits {
   margin: 1rem 0;
