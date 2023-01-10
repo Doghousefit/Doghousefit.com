@@ -5,12 +5,12 @@ import Footer from '../../components/Footer';
 
 function Home() {
   return (
-    <div>
-      <Navbar />
+    <>
+      <Navbar position="absolute" />
       <LandingPage />
       <Content />
       <Footer />
-    </div>
+    </>
   );
 }
 

@@ -18,7 +18,8 @@ const issueSchema = mongoose.Schema(
         },
         tags: {
             type: [String],
-            required: [true, 'Please add tags']
+            required: [true, 'Please add tags'],
+            default: []
         },
     }, {
         timestamps: true
