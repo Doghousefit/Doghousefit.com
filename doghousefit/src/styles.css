@@ -16,7 +16,7 @@ p {
   margin-bottom: 1rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
   color: white;
   margin: 3rem 0 1.38rem;
   font-family: "Poppins", sans-serif;
@@ -209,10 +209,25 @@ div.landingpage a img:hover {
     width: 40vw !important;
   }
 }
+.wrapper {
+  max-width: 700px;
+  margin: 2rem auto;
+}
+
+@media (min-width: 900px) {
+  .wrapper {
+    max-width: 850px;
+  }
+}
+@media (min-width: 1200px) {
+  .wrapper {
+    max-width: 1100px;
+  }
+}
 .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 5% 10%;
+  width: 100%;
 }
 
 div.content-container {
@@ -272,21 +287,6 @@ div.content-container form input {
 div.content-container form input::placeholder {
   text-align: center;
 }
-div.content-container a.archive {
-  font-family: "Poppins", sans-serif;
-  background: linear-gradient(100.3deg, #A9D1FF 34.22%, #FEFEFF 100%);
-  box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);
-  border-radius: 70px;
-  padding: 10px 20px;
-  width: 40%;
-  border: none;
-  text-decoration: none;
-  color: black;
-}
-div.content-container a.archive:hover {
-  cursor: pointer;
-  filter: brightness(0.8);
-}
 
 div.image-carousel {
   position: relative;
@@ -307,18 +307,18 @@ div.image-carousel .images img.hidden {
 }
 div.image-carousel .images img.active {
   position: absolute;
-  transform: translate(34%, -100%);
+  transform: translate(16%, -100%);
   z-index: 1;
 }
 div.image-carousel .images img.left {
   filter: brightness(0.75);
   position: absolute;
-  transform: translate(14%, -90%);
+  transform: translate(-14%, -90%);
 }
 div.image-carousel .images img.right {
   filter: brightness(0.75);
   position: absolute;
-  transform: translate(54%, -90%);
+  transform: translate(46%, -90%);
 }
 div.image-carousel .indicators {
   position: relative;
@@ -344,6 +344,28 @@ div.image-carousel .indicators span.active {
 
 div.text {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.text form {
+  width: 100%;
+}
+div.text a.archive {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(100.3deg, #A9D1FF 34.22%, #FEFEFF 100%);
+  box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 70px;
+  padding: 10px 20px;
+  width: 40%;
+  border: none;
+  text-decoration: none;
+  color: black;
+  margin-top: 2rem;
+}
+div.text a.archive:hover {
+  cursor: pointer;
+  filter: brightness(0.8);
 }
 
 div.newsletter {
@@ -382,6 +404,74 @@ div.newsletter img {
   }
   .indicators {
     top: 8vw !important;
+  }
+}
+.mission-statement {
+  margin: 5rem 0;
+  width: 100%;
+}
+.mission-statement * {
+  text-align: center;
+}
+.mission-statement h1 {
+  margin-bottom: 0;
+}
+.mission-statement .question {
+  width: 60%;
+  margin: 2rem auto;
+  font-weight: 200;
+}
+.mission-statement strong {
+  display: block;
+  color: #4784E1;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  font-size: 2.5rem;
+}
+.mission-statement p {
+  font-weight: 200;
+  margin-top: 2rem;
+  padding: 0 25px;
+  font-size: 20px;
+}
+
+.goals-statement {
+  margin: 5rem 0;
+}
+.goals-statement * {
+  text-align: center;
+}
+.goals-statement .goal-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.goals-statement .goal-container .goal {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 20px;
+  background-color: #444;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.goals-statement .goal-container .goal h5 {
+  margin-top: 0;
+}
+.goals-statement .goal-container .goal .goal-title {
+  margin-top: 0;
+  padding: 0.5rem 0;
+  background: linear-gradient(90.64deg, #A9D1FF 22.75%, #FFFFFF 100.29%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@media (max-width: 900px) {
+  .goal-container {
+    grid-template-columns: 1fr !important;
+  }
+  .mission-statement h4.question {
+    width: 80%;
   }
 }
 .newsletter-container {
@@ -519,6 +609,9 @@ footer .privacy-policy:hover {
 @media (max-width: 640px) {
   .copyright, .privacy-policy {
     font-size: 10px;
+  }
+  .footer-container h6 {
+    font-size: 12px;
   }
 }
 
