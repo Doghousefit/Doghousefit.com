@@ -7,7 +7,7 @@ import Issue from "./pages/Issue/Issue";
 
 const RouteSwitch = () => {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/">
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/newsletters" element={<Newsletters />} />
