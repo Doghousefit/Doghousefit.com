@@ -1,0 +1,14 @@
+###
+GET http://localhost:5002/
+
+
+
+###
+POST http://localhost:5002/
+Content-Type: application/json
+
+{
+    "issue": "1",
+    "title": "test",
+    "tags": ["asasdf", "Asdf"]
+}

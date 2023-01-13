@@ -25,3 +25,5 @@ const issueSchema = mongoose.Schema(
         timestamps: true
     }
 )
+
+module.exports = mongoose.model('Issue', issueSchema)
