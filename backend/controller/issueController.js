@@ -4,13 +4,27 @@ const Issue = require('../models/issueModel');
 // @desc Gets all issues
 // @route GET /newsletters
 // @access Public
-const getIssue = asyncHandler(async (req, res) => {
-    console.log('test')
-
-    // const { issue, title, date, tags } = await Issue.find();
+const getAllIssue = asyncHandler(async (req, res) => {
     const issues = await Issue.find();
 
     // res.status(200).json({  message: "test" })
+    res.status(200).json(issues)
+})
+
+// @desc Gets a single issue
+// @route GET /newsletters/:id
+// @access Public
+const getIssue = asyncHandler(async (req, res) => {
+    // const { issue } = req.body
+    const { id } = req.params
+
+    if(id === undefined) {
+        res.status(400)
+        throw new Error('Please add an issue number')
+    }
+
+    const issues = await Issue.find({ issue: id });
+
     res.status(200).json(issues)
 })
 
@@ -45,5 +59,5 @@ const createIssue = asyncHandler(async (req, res) => {
 })
 
 module.exports = {
-    getIssue, createIssue
+    getAllIssue, getIssue, createIssue
 }

@@ -1,8 +1,9 @@
 const express = require('express')
 const router = express.Router()
 
-const { getIssue, createIssue } = require('../controller/issueController')
+const { getAllIssue, getIssue, createIssue } = require('../controller/issueController')
 
-router.get('/', getIssue).post('/', createIssue)
+router.get('/', getAllIssue).post('/', createIssue)
+router.get('/:id', getIssue)
 
 module.exports = router
