@@ -3,8 +3,11 @@ import MailchimpForm from './MailChimpForm';
 import ImageCarousel from './ImageCarousel';
 
 const Content = () => {
+    console.log(process.env)
     if(process.env.REACT_APP_MAILCHIMP_URL === undefined) {
         console.log('mailchimp link undefined')
+    } else {
+        console.log('mailchimp link found')
     }
     return (
         <div className="wrapper">
