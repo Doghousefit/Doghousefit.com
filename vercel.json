@@ -7,7 +7,7 @@
         },
         {
             "src": "/api",
-            "dest": "http://localhost:5000"
+            "dest": "http://localhost:3001"
         }
     ]
 }
