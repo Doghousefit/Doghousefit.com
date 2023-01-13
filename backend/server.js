@@ -9,7 +9,7 @@ const { errorHandler } = require('./middleware/errorMiddleware')
 const cors = require('cors');
 const path = require('path');
 
-const port = process.env.PORT || 5000
+const port = 3001
 
 const app = express()
 
@@ -20,7 +20,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 // app.use('/api/newsletters', require('./routes/newsletterRoutes'))
-app.use('/api/newsletters', require(path.join(__dirname, 'api', 'routes', 'newsletterRoutes.js')));
+app.use('/newsletters', require(path.join(__dirname, 'routes', 'newsletterRoutes.js')));
 
 
 app.use(errorHandler)
