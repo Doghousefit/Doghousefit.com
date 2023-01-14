@@ -14,8 +14,8 @@ const Issue = () => {
     });
     
     useEffect(() => {
-        console.log(window.location.hostname)
-        axios.get(`http://${window.location.hostname}:3001/api/newsletters/${id}`)
+        console.log(`${process.env.api}/newsletters/${id}`)
+        axios.get(`${process.env.api}/newsletters/${id}`)
             .then(res => {
                 console.log(res.data[0])
 
