@@ -1,8 +1,8 @@
 ###
-GET http://localhost:3001/api/newsletters
+GET http://localhost:5001/
 
 ###
-GET http://localhost:3001/newsletters
+GET http://localhost:5001/newsletters
 
 ###
 GET http://localhost:3001/api/newsletters/1
