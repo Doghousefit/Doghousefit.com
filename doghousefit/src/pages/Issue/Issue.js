@@ -14,8 +14,9 @@ const Issue = () => {
     });
     
     useEffect(() => {
+        console.log(process.env)
         console.log(`${process.env.api}/newsletters/${id}`)
-        axios.get(`${process.env.api}/newsletters/${id}`)
+        axios.get(`${process.env.REACT_APP_BACKEND_API}/newsletters/${id}`)
             .then(res => {
                 console.log(res.data[0])
 
