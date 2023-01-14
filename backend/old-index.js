@@ -1,7 +1,3 @@
-// if (process.env.NODE_ENV !== 'production') {
-//     require('dotenv').config({path: __dirname+'/.env'});
-// }
-
 const express = require('express')
 // const connectDB = require('./config/db')
 const { errorHandler } = require('./middleware/errorMiddleware')
