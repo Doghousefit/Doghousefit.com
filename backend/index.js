@@ -9,11 +9,10 @@ const cors = require('cors');
 // const path = require('path');
 const dotenv = require('dotenv').config()
 const mongoose = require('mongoose')
+import newsletterRoutes from './routes/newsletterRoutes';
 const port = 3001
 
 const app = express()
-
-
 
 const connectDB = async () => {
     try {
@@ -37,7 +36,8 @@ app.use(express.urlencoded({ extended: false }))
 app.get('/', (req, res) => {
     res.json({message: 'connected to api'})
 })
-app.use('/newsletters', require('./routes/newsletterRoutes'))
+// app.use('/newsletters', require('./routes/newsletterRoutes'))
+app.use('/newsletters', newsletterRoutes)
 
 app.use(errorHandler)
 
@@ -45,4 +45,4 @@ app.listen(port, () => {
     console.log(`Server started on port: ${port}`)
 })
 
-module.exports = app
+// module.exports = app
