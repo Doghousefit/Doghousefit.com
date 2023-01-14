@@ -14,7 +14,8 @@ const Issue = () => {
     });
     
     useEffect(() => {
-        axios.get(`http://localhost:3001/newsletters/${id}`)
+        console.log(window.location.hostname)
+        axios.get(`http://${window.location.hostname}:3001/api/newsletters/${id}`)
             .then(res => {
                 console.log(res.data[0])
 
@@ -22,7 +23,7 @@ const Issue = () => {
                 if(res.data[0] === undefined) {
                     navigate('/newsletters')
                 }
-                
+
                 setIssueData({
                     issue: res.data[0].issue,
                     title: res.data[0].title,

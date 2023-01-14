@@ -2,6 +2,9 @@
 GET http://localhost:3001/api/newsletters
 
 ###
+GET http://localhost:3001/newsletters
+
+###
 GET http://localhost:3001/api/newsletters/1
 
 ###
