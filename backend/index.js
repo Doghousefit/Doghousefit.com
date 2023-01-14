@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
   res.json({message: "Express on Vercel"});
 });
 app.get("/api", (req, res) => {
-    res.json({message: "API on Vercel", api: `${process.env.MONGO_URI}`});
+    res.json({message: "API on Vercel"});
 });
 
 app.use(cors())
