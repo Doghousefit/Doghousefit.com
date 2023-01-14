@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar";
+import Navbar from '../components/Navbar';
 
 const WIP_Style = {
     textAlign: 'center',

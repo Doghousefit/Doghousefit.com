@@ -1,16 +1,32 @@
 @use 'globals' as *;
 
+.wrapper {
+    max-width: 700px;
+    margin: 2rem auto;
+}
+
+@media (min-width: 900px) {
+    .wrapper {
+        max-width: 850px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .wrapper {
+        max-width: 1100px;
+    }
+}
+
 .content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 5% 10%;
+    width: 100%;
 }
 
 div.content-container {
     padding: 8%;
     h2 {
         font-weight: 400;
-        background: linear-gradient(90.64deg, #A9D1FF 22.75%, #FFFFFF 100.29%);
         background: linear-gradient(90.64deg, #A9D1FF 22.75%, #FFFFFF 100.29%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -70,23 +86,6 @@ div.content-container {
             }
         }
     }
-
-    a.archive {
-        @include main-font;
-        background: linear-gradient(100.3deg, #A9D1FF 34.22%, #FEFEFF 100%);
-        box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);
-        border-radius: 70px;
-        padding: 10px 20px;
-        width: 40%;
-        border: none;
-        text-decoration: none;
-        color: black;
-
-        &:hover {
-            cursor: pointer;
-            filter: brightness(0.8);
-        }
-    }
 }
 div.image-carousel {
     position: relative;
@@ -100,23 +99,24 @@ div.image-carousel {
         }
         img.hidden {
             opacity: 0;
+            // opacity: 0.5;
             display: block;
             margin: auto;
         }
         img.active {
             position: absolute;
-            transform: translate(34%, -100%);
+            transform: translate(16%, -100%);
             z-index: 1;
         }
         img.left {
             filter: brightness(0.75);
             position: absolute;
-            transform: translate(14%, -90%);
+            transform: translate(-14%, -90%);
         }
         img.right {
             filter: brightness(0.75);
             position: absolute;
-            transform: translate(54%, -90%);
+            transform: translate(46%, -90%);
         }
     }
     .indicators {
@@ -144,6 +144,30 @@ div.image-carousel {
 
 div.text {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    form {
+        width: 100%;
+    }
+    a.archive {
+        @include main-font;
+        background: linear-gradient(100.3deg, #A9D1FF 34.22%, #FEFEFF 100%);
+        box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);
+        border-radius: 70px;
+        padding: 10px 20px;
+        width: 40%;
+        border: none;
+        text-decoration: none;
+        color: black;
+        margin-top: 2rem;
+
+        &:hover {
+            cursor: pointer;
+            filter: brightness(0.8);
+        }
+    }
 }
 div.newsletter {
     display: flex;
@@ -189,5 +213,82 @@ div.newsletter {
     }
     .indicators {
         top: 8vw !important;
+    }
+}
+
+.mission-statement {
+    margin: 5rem 0;
+    width: 100%;
+
+    * {
+        text-align: center;
+    }
+    h1 {
+        margin-bottom: 0;
+    }
+    .question {
+        width: 60%;
+        margin: 2rem auto;
+        font-weight: 200;
+    }
+    strong {
+        // color: #2870D9;
+        display: block;
+        color: #4784E1;
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        font-size: 2.5rem;
+    }
+    p {
+        font-weight: 200;
+        margin-top: 2rem;
+        padding: 0 25px;
+        font-size: 20px;
+    }
+}
+
+.goals-statement {
+    margin: 5rem 0;
+    
+    * {
+        text-align: center;
+    }
+    // h1 {
+    //     // margin-bottom: 0;
+    // }
+    .goal-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .goal {
+            margin: 1rem;
+            padding: 1rem;
+            border-radius: 20px;
+            background-color: #444;
+            box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+
+            h5 {
+                margin-top: 0;
+            }
+            .goal-title {
+                margin-top: 0;
+                padding: 0.5rem 0;
+                background: linear-gradient(90.64deg, #A9D1FF 22.75%, #FFFFFF 100.29%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                // text-fill-color: transparent;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .goal-container {
+        grid-template-columns: 1fr !important;
+    }
+    .mission-statement h4.question {
+        width: 80%;
     }
 }

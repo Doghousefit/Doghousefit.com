@@ -1,0 +1,18 @@
+###
+GET http://localhost:3001/api/newsletters
+
+###
+GET http://localhost:3001/newsletters
+
+###
+GET http://localhost:3001/api/newsletters/1
+
+###
+POST http://localhost:3001/api/newsletters
+Content-Type: application/json
+
+{
+    "issue": "1",
+    "title": "test",
+    "tags": ["asasdf", "Asdf"]
+}
