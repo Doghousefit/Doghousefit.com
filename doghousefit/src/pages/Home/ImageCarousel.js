@@ -8,7 +8,6 @@ const ImageCarousel = () => {
     const [index, setIndex] = useState(2);
     
     const handleImageChange = (index) => {
-        console.log(index);
         setIndex(index);
     }
 
