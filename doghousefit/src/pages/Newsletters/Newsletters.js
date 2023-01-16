@@ -8,25 +8,15 @@ import axios from 'axios';
 
 const Newsletters = () => {
     const [issues, setIssues] = useState([]);
-    const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
     const [issuesPerPage, setIssuesPerPage] = useState(5);
 
     useEffect(() => {
-        // console.log(`${process.env.REACT_APP_BACKEND_API}/newsletters`)
-        
         const fetchIssue = async () => {
-            setLoading(true);
             const res = await axios.get(`${process.env.REACT_APP_BACKEND_API}/newsletters`)
-                .then(res => {
-                    setIssues(res.data)
-                    setLoading(false)
-                }).catch(error => {
-                    console.log(error)
-                })
-            }
-
-            fetchIssue()
+            setIssues(res.data)
+        }
+        fetchIssue()
     }, [])
     
     // Change page

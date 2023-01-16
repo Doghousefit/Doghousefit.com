@@ -16,23 +16,19 @@ const Issue = () => {
     useEffect(() => {
         const fetchIssue = async () => {
             const res = await axios.get(`${process.env.REACT_APP_BACKEND_API}/newsletters/${id}`)
-                .then(res => {
-                    console.log(res.data[0])
-    
-                    // Redirects if there is no newsletter
-                    if(res.data[0] === undefined) {
-                        navigate('/newsletters')
-                    }
-    
-                    setIssueData({
-                        issue: res.data[0].issue,
-                        title: res.data[0].title,
-                        date: res.data[0].date,
-                        tags: res.data[0].tags
-                    });
-                }).catch(error => {
-                    console.log(error)
-                })
+            console.log(res.data[0])
+
+            // Redirects if there is no newsletter
+            if(res.data[0] === undefined) {
+                navigate('/newsletters')
+            }
+
+            setIssueData({
+                issue: res.data[0].issue,
+                title: res.data[0].title,
+                date: res.data[0].date,
+                tags: res.data[0].tags
+            });
         }
         fetchIssue()
         }, [])
