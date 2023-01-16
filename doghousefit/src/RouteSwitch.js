@@ -12,8 +12,9 @@ const RouteSwitch = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/newsletters" element={<Newsletters />} />
                 <Route path="/newsletters/:id" element={<Issue />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/Contact" element={<Contact />} />
+                {/* <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} /> */}
+                <Route path="/topics" element={<Contact />} />
             </Routes>
         </BrowserRouter>
     );
