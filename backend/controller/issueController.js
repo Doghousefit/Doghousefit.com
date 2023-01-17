@@ -4,12 +4,24 @@ const Issue = require('../models/issueModel');
 // @desc Gets all issues
 // @route GET /newsletters
 // @access Public
-const getAllIssue = asyncHandler(async (req, res) => {
-    const issues = await Issue.find();
+// const getAllIssue = asyncHandler(async (req, res) => {
+//     const issues = await Issue.find();
 
-    // res.status(200).json({  message: "test" })
+//     // res.status(200).json({  message: "test" })
+//     res.status(200).json(issues)
+// })
+
+const getAllIssue = asyncHandler(async (req, res) => {
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 5;
+    
+    const issues = await Issue.find()
+        .skip((page - 1) * limit)
+        .limit(limit);
+
     res.status(200).json(issues)
 })
+
 
 // @desc Gets a single issue
 // @route GET /newsletters/:id
