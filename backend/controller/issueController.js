@@ -12,12 +12,13 @@ const Issue = require('../models/issueModel');
 // })
 
 const getAllIssue = asyncHandler(async (req, res) => {
-    const page = parseInt(req.query.page) || 1;
-    const limit = parseInt(req.query.limit) || 5;
+    // const page = parseInt(req.query.page) || 1;
+    // const limit = parseInt(req.query.limit) || 5;
     
+    // const issues = await Issue.find()
+    //     .skip((page - 1) * limit)
+    //     .limit(limit);
     const issues = await Issue.find()
-        .skip((page - 1) * limit)
-        .limit(limit);
 
     res.status(200).json(issues)
 })
